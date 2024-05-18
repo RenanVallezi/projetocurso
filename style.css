@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: url(./assests/bg-mobile-light.jpg);
+  --body-color: #000000;
+  --border-color: rgba(3, 3, 3, 0.5);
+  --bgh: rgba(0, 0, 0, 0.1);
+  --color-hover: black;
+  --socia-lhover: rgba(68, 0, 255, 0.2);
+  --text-obs: black;
+  --switch: url(./assests/sun.svg);
+}
+
+.dark {
+  --bg-color: url(./assests/images.jpeg);
+  --body-color: #ffffff;
+  --border-color: rgba(255, 255, 255, 0.5);
+  --bgh: rgba(255, 255, 255, 0.1);
+  --color-hover: rgb(0, 134, 171);
+  --socia-lhover: rgb(0, 134, 171);
+  --text-obs: white; 
+  --switch: url(./assests/moon.svg)
+}
+
+body {
+  background-image: var(--bg-color);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  
+}
+body * {
+  font-family: "Inter", sans-serif;
+  color: var(--body-color);
+  text-align: center;
+}
+
+#container {
+  width: 360px;
+  size: cover;
+  margin: auto;
+  margin-top: 56px;
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+}
+
+#profile img {
+  display: block;
+  text-align: center;
+  width: 112px;
+  margin: auto;
+  margin-bottom: 8px;
+}
+
+#profile p {
+  font-weight: 550;
+  line-height: 24px;
+  
+}
+
+#switch{
+
+position: relative;
+width:64px;
+
+margin: 4px auto;
+
+}
+
+button{
+  
+  width: 32px;
+  height: 32px;
+  background: white var(--switch) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#switch span{
+display: block;
+width: 64px;
+height: 24px;
+background: var(--bgh);
+border: 1px solid var(--border-color);
+backdrop-filter: blur(4px);
+-webkit-backdrop-filter: blur(4px);
+border-radius: 9999px;
+
+}
+
+.dark #switch button {
+
+right: 0;
+left: initial;
+
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+}
+ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: row;
+  background: rgba(255, 250, 250, 0.1);
+  padding: 16px 24px;
+  border: 3px solid var(--border-color);
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  -webkit-backdrop-filter: blur(4px);
+  font-weight: 440px;
+  transition: all 0.7s;
+}
+
+ul li a:hover {
+  background: var(--bgh);
+  border: 4px solid rgba(0, 0, 0, 0.5);
+  color: var(--color-hover);
+}
+
+#social {
+  padding-top: 15px;
+}
+
+#social a {
+  font-size: 25px;
+  padding: 3px;
+}
+
+#social a {
+  align-items: center;
+  justify-content: center;
+}
+
+#social a:hover {
+  background-color: var(--socia-lhover);
+
+  border-radius: 15%;
+  backdrop-filter: blur(8px);
+}
+#obs {
+  padding-top: 30px;
+  color: --te;
+}
