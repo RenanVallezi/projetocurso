@@ -5,7 +5,7 @@
 }
 
 :root {
-  --bg-color: url(./assests/bg-mobile-light.jpg);
+  --bg-img: url(./assests/bg-mobile-light.jpg);
   --body-color: #000000;
   --border-color: rgba(3, 3, 3, 0.5);
   --bgh: rgba(0, 0, 0, 0.1);
@@ -16,7 +16,7 @@
 }
 
 .dark {
-  --bg-color: url(./assests/images.jpeg);
+  --bg-img: url(./assests/images.jpeg);
   --body-color: #ffffff;
   --border-color: rgba(255, 255, 255, 0.5);
   --bgh: rgba(255, 255, 255, 0.1);
@@ -27,10 +27,9 @@
 }
 
 body {
-  background-image: var(--bg-color);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
+  background: var(--bg-img) no-repeat top center/cover;
+  height: 100vh;
+  
   
 }
 body * {
@@ -160,4 +159,15 @@ ul li a:hover {
 #obs {
   padding-top: 30px;
   color: --te;
+}
+
+@media (min-width: 700px){
+  :root{
+    --bg-img: url(./assests/bg-mobile-light.jpg);
+  }
+
+  .dark {
+  --bg-img: url(./assests/images.jpeg);
+  }
+
 }
