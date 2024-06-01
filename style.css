@@ -13,6 +13,7 @@
   --socia-lhover: rgba(68, 0, 255, 0.2);
   --text-obs: black;
   --switch: url(./assests/sun.svg);
+  --button-cl: rgb(82, 0, 76);
 }
 
 .dark {
@@ -23,7 +24,8 @@
   --color-hover: rgb(0, 134, 171);
   --socia-lhover: rgb(0, 134, 171);
   --text-obs: white; 
-  --switch: url(./assests/moon.svg)
+  --switch: url(./assests/moon.svg);
+  --button-cl: rgb(255, 255, 255);
 }
 
 body {
@@ -86,6 +88,15 @@ button{
   z-index: 1;
   top: 50%;
   transform: translateY(-50%);
+
+  animation: slide-back 0.2s
+}
+
+button:hover{
+  outline: 5px solid rgb(93, 93, 93);
+   
+
+
 }
 
 #switch span{
@@ -98,12 +109,12 @@ backdrop-filter: blur(4px);
 -webkit-backdrop-filter: blur(4px);
 border-radius: 9999px;
 
+
+
 }
 
 .dark #switch button {
-
-right: 0;
-left: initial;
+animation: slide-in 0.4s forwards;
 
 }
 
@@ -171,3 +182,34 @@ ul li a:hover {
   }
 
 }
+
+@keyframes slide-in{
+  from{
+
+    left: 0;
+
+  }
+
+  to{
+
+    left: 50%;
+
+  }
+
+  
+
+
+}
+
+@keyframes slide-back {
+
+  from{
+    left:50%;
+
+  }
+  to{
+  left: 0;
+
+  }
+
+  }
